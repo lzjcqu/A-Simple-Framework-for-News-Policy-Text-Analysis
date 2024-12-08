@@ -12,3 +12,5 @@ full_text: 政策文本全文获取
 monthlynews.py: 按月度获取谷歌新闻
 
 preprocessing： 预处理（分词+去停用）
+
+news_full_text_high_performance:  并发获取新闻正文

@@ -1,0 +1,34 @@
+#jieba.add_word('国家发展改革委')
+jieba.add_word('工业和信息化部')
+#jieba.add_word('可再生能源')
+custom_dicts = [
+    'D:\分词词库\merged_words.txt',
+]
+for dict_path in custom_dicts:
+    jieba.load_userdict(dict_path)
+# 读取停用词表
+stopwords_path = r'D:\中文停用词表.txt'
+with open(stopwords_path, 'r', encoding='utf-8') as f:
+    stopwords = set(line.strip() for line in f)
+
+# 读取文件内容
+file_path = r'D:\energy_before_combined\energypolicy_23595.txt'
+with open(file_path, 'r', encoding='utf-8') as file:
+    content = file.read()
+
+# 去除空格
+content_no_spaces = content.replace(' ', '')
+
+# 清洗文本，只保留中文、数字和字母
+content_clean = re.sub(r'[^\u4e00-\u9fff0-9a-zA-Z]', '', content_no_spaces)
+
+# 分词
+tokens = jieba.lcut(content_clean)
+
+print(tokens)
+
+# 过滤停用词
+all_filtered_tokens = [word for word in tokens if word not in stopwords]
+
+# 输出过滤后的词语列表
+print(all_filtered_tokens)

@@ -22,3 +22,9 @@ cut_jieba.py :基于外挂词库(搜狗财经词库+爬取能源常用词)的jie
 word2wec_train(test).py: Word2Vec模型的训练与测试，如果要在本地运行，首先要使用此项目：https://github.com/lzhenboy/word2vec-Chinese
 完成中文维基百科的预处理（不包括分词），然后使用perprocessing对维基百科语料分词。之后将两种语料合并后训练即可。
 
+
+
+Reference：
+https://github.com/lzhenboy/word2vec-Chinese
+
+

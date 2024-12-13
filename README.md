@@ -5,6 +5,8 @@
 国务院政策文件库政策文本爬取
 
 单个文本的分词（基于HANLP）以及去停用（基于jieba和哈工大停用词库）
+多文本预处理(两种方法：一种基于HanLP，不外挂词典；一种基于jieba，外挂词典)
+基于Word2Vec模型的能源政策词典扩充
 
 main.py: 政策文本list获取
 full_text: 政策文本全文获取
@@ -15,6 +17,6 @@ preprocessing： 预处理（分词+去停用）
 
 news_full_text_high_performance:  并发获取新闻正文
 
-基于外挂词库(搜狗财经词库+爬取能源常用词)的jieba分词
+cut_jieba.py :基于外挂词库(搜狗财经词库+爬取能源常用词)的jieba分词 
 
-基于Word2Vec模型的能源政策词典扩充
+

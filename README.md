@@ -14,3 +14,6 @@ monthlynews.py: 按月度获取谷歌新闻
 preprocessing： 预处理（分词+去停用）
 
 news_full_text_high_performance:  并发获取新闻正文
+
+基于外挂词库(搜狗财经词库+爬取能源常用词)的jieba分词
+
